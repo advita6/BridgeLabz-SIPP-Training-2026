@@ -1,6 +1,6 @@
 //A warehouse stores item quantities in an array. Find the max, min, total stock, and detect duplicates. Extend: rotate the stock array by k positions (simulate daily shift handover), and transpose a 2D shelf grid.
 
-public class q3 {
+public class WarehouseStocks {
     public static void main(String[] args) {
 
         int[] stock = {10, 20, 30, 20, 40, 50, 10};
