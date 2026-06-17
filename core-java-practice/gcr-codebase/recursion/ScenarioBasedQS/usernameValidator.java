@@ -1,0 +1,25 @@
+public class UsernameValidator {
+
+    public static boolean isValidUsername(String username) {
+        return checkUsername(username, 0);
+    }
+
+    private static boolean checkUsername(String username, int index) {
+        if (username.isEmpty()) {
+            return false;
+        }
+        if (index == username.length()) {
+            return true;
+        }
+        char ch = username.charAt(index);
+        if (ch < 'a' || ch > 'z') {
+            return false;
+        }
+        return checkUsername(username, index + 1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isValidUsername("abcdxyz"));
+        System.out.println(isValidUsername("abcD123"));
+    }
+}
