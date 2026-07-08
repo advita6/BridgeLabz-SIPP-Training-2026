@@ -1,13 +1,11 @@
 import java.util.List;
 
 public class UpperBoundedExample {
-    // Read-only: We can safely read elements as 'Number'
     public static double sumOfList(List<? extends Number> list) {
         double sum = 0.0;
         for (Number n : list) {
             sum += n.doubleValue();
         }
-        // list.add(45.6); // Compile-time error! Read-only operation.
         return sum;
     }
 
